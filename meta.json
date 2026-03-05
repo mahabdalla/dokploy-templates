@@ -2831,7 +2831,7 @@
   {
     "id": "grafana",
     "name": "Grafana",
-    "version": "9.5.20",
+    "version": "12.4",
     "description": "Grafana is an open source platform for data visualization and monitoring.",
     "logo": "grafana.svg",
     "links": {
@@ -3097,6 +3097,25 @@
       "self-hosted",
       "money-management",
       "group-finances"
+    ]
+  },
+  {
+    "id": "imgproxy",
+    "name": "imgproxy",
+    "version": "v3.30.1",
+    "description": "imgproxy is a fast and secure image processing server, fronted by nginx with built-in response caching for repeated transformations.",
+    "logo": "imgproxy.png",
+    "links": {
+      "github": "https://github.com/imgproxy/imgproxy",
+      "website": "https://imgproxy.net/",
+      "docs": "https://docs.imgproxy.net/"
+    },
+    "tags": [
+      "images",
+      "media",
+      "proxy",
+      "cdn",
+      "caching"
     ]
   },
   {
@@ -3930,6 +3949,23 @@
     ]
   },
   {
+    "id": "mediafetch",
+    "name": "MediaFetch",
+    "version": "1.1.1",
+    "description": "A tiny, self-hosted web wrapper for yt-dlp to download video and audio. Optional basic auth.",
+    "logo": "mediafetch.svg",
+    "links": {
+      "github": "https://github.com/lukedunsmoto/mediafetch",
+      "website": "https://www.lukedunsmore.com/mediafetch",
+      "docs": "https://docs.lukedunsmore.com/docs/self-hosted/mediafetch/"
+    },
+    "tags": [
+      "utilities",
+      "media",
+      "downloader"
+    ]
+  },
+  {
     "id": "meilisearch",
     "name": "Meilisearch",
     "version": "v1.8.3",
@@ -4294,10 +4330,10 @@
   },
   {
     "id": "nextcloud-aio",
-    "name": "Nextcloud All in One",
-    "version": "30.0.2",
-    "description": "Nextcloud (AIO) is a self-hosted file storage and sync platform with powerful collaboration capabilities. It integrates Files, Talk, Groupware, Office, Assistant and more into a single platform for remote work and data protection.",
-    "logo": "nextcloud-aio.svg",
+    "name": "Nextcloud",
+    "version": "stable",
+    "description": "Nextcloud is a self-hosted file storage and sync platform with powerful collaboration capabilities. It integrates Files, Talk, Groupware, Office, Assistant and more into a single platform for remote work and data protection.",
+    "logo": "nextcloud.png",
     "links": {
       "github": "https://github.com/nextcloud/docker",
       "website": "https://nextcloud.com/",
@@ -5880,6 +5916,24 @@
     ]
   },
   {
+    "id": "strapi",
+    "name": "Strapi",
+    "version": "v5.33.0",
+    "description": "Open-source headless CMS to build powerful APIs with built-in content management.",
+    "logo": "strapi.svg",
+    "links": {
+      "github": "https://github.com/strapi/strapi",
+      "discord": "https://discord.com/invite/strapi",
+      "docs": "https://docs.strapi.io",
+      "website": "https://strapi.io"
+    },
+    "tags": [
+      "headless",
+      "cms",
+      "content-management"
+    ]
+  },
+  {
     "id": "streamflow",
     "name": "StreamFlow",
     "version": "2.1",
@@ -6174,6 +6228,24 @@
     ]
   },
   {
+    "id": "tuwunel",
+    "name": "Tuwunel",
+    "version": "v1.5.0",
+    "description": "High performance Matrix homeserver written in Rust. Official successor to conduwuit - a scalable, low-cost, enterprise-ready alternative to Synapse.",
+    "logo": "tuwunel.svg",
+    "links": {
+      "github": "https://github.com/matrix-construct/tuwunel",
+      "website": "https://tuwunel.chat",
+      "docs": "https://matrix-construct.github.io/tuwunel/"
+    },
+    "tags": [
+      "matrix",
+      "chat",
+      "messaging",
+      "rust"
+    ]
+  },
+  {
     "id": "twenty",
     "name": "Twenty CRM",
     "version": "latest",
@@ -6268,6 +6340,24 @@
     "tags": [
       "self-hosted",
       "networking"
+    ]
+  },
+  {
+    "id": "unleash",
+    "name": "Unleash",
+    "version": "7.4.0",
+    "description": "Open-source feature management platform",
+    "logo": "unleash.png",
+    "links": {
+      "github": "https://github.com/unleash/unleash",
+      "website": "https://www.getunleash.io/",
+      "docs": "https://docs.getunleash.io/"
+    },
+    "tags": [
+      "feature-flag",
+      "feature-management",
+      "feature-toggle",
+      "remote-configuration"
     ]
   },
   {
@@ -6370,6 +6460,23 @@
     },
     "tags": [
       "open-source"
+    ]
+  },
+  {
+    "id": "verdaccio",
+    "name": "Verdaccio",
+    "version": "6",
+    "description": "A lightweight Node.js private proxy registry",
+    "logo": "verdaccio.svg",
+    "links": {
+      "github": "https://github.com/verdaccio/verdaccio",
+      "website": "https://www.verdaccio.org/",
+      "docs": "https://www.verdaccio.org/docs/what-is-verdaccio"
+    },
+    "tags": [
+      "node.js",
+      "package-repository",
+      "npm"
     ]
   },
   {
