@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   simstudio:
-    image: ghcr.io/simstudioai/simstudio:v0.6.10
+    image: ghcr.io/simstudioai/simstudio:latest
     restart: unless-stopped
     expose:
       - 3000
@@ -40,7 +40,7 @@ services:
       start_period: 10s
 
   realtime:
-    image: ghcr.io/simstudioai/realtime:v0.6.10
+    image: ghcr.io/simstudioai/realtime:latest
     restart: unless-stopped
     expose:
       - 3002
@@ -67,7 +67,7 @@ services:
       start_period: 10s
 
   migrations:
-    image: ghcr.io/simstudioai/migrations:v0.6.10
+    image: ghcr.io/simstudioai/migrations:latest
     working_dir: /app/packages/db
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
