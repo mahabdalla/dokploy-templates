@@ -3,7 +3,7 @@ services:
   zeroclaw:
     image: ghcr.io/zeroclaw-labs/zeroclaw:v0.6.9
     restart: unless-stopped
-    command: ["zeroclaw", "daemon"]
+    command: ["daemon"]
     environment:
       # Core
       - PROVIDER=${PROVIDER:-openai}
