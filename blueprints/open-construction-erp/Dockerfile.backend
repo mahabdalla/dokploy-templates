@@ -12,11 +12,12 @@ RUN groupadd -r oe && useradd -r -g oe -d /app -s /sbin/nologin oe
 
 WORKDIR /app
 
-# Install deps from requirements.txt — bypasses hatchling/pyproject build entirely
 COPY --from=source /src/backend/requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend source
+# Filter out Windows-only packages before installing
+RUN grep -viE 'pywin32|pywinpty' requirements.txt \
+    | pip install --no-cache-dir -r /dev/stdin
+
 COPY --from=source /src/backend/ backend/
 COPY --from=source /src/data/ data/
 
