@@ -12,10 +12,11 @@ RUN groupadd -r oe && useradd -r -g oe -d /app -s /sbin/nologin oe
 
 WORKDIR /app
 
-# FIX: copy README.md alongside pyproject.toml (upstream bug — hatchling requires it)
-COPY --from=source /src/backend/pyproject.toml /src/backend/README.md backend/
-RUN pip install --no-cache-dir ./backend
+# Install deps from requirements.txt — bypasses hatchling/pyproject build entirely
+COPY --from=source /src/backend/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy backend source
 COPY --from=source /src/backend/ backend/
 COPY --from=source /src/data/ data/
 
@@ -25,4 +26,4 @@ USER oe
 
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
