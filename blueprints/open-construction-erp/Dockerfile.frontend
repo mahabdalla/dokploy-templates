@@ -1,0 +1,16 @@
+FROM alpine/git AS source
+RUN git clone --depth 1 --branch v0.2.0 \
+    https://github.com/datadrivenconstruction/OpenConstructionERP.git /src
+
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY --from=source /src/frontend/package.json /src/frontend/package-lock.json ./
+RUN npm ci --ignore-scripts
+COPY --from=source /src/frontend/ ./
+RUN npm run build
+
+FROM nginx:alpine
+RUN rm /etc/nginx/conf.d/default.conf
+COPY --from=source /src/deploy/docker/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/dist /usr/share/nginx/html
+EXPOSE 80

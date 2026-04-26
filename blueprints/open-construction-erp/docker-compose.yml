@@ -20,8 +20,8 @@ services:
 
   open-construction-erp-backend:
     build:
-      context: https://github.com/datadrivenconstruction/OpenConstructionERP.git#v0.2.0
-      dockerfile: deploy/docker/Dockerfile.backend
+      context: .
+      dockerfile: blueprints/open-construction-erp/Dockerfile.backend
     restart: unless-stopped
     depends_on:
       postgres:
@@ -48,8 +48,8 @@ services:
 
   open-construction-erp:
     build:
-      context: https://github.com/datadrivenconstruction/OpenConstructionERP.git#v0.2.0
-      dockerfile: deploy/docker/Dockerfile.frontend
+      context: .
+      dockerfile: blueprints/open-construction-erp/Dockerfile.frontend
     restart: unless-stopped
     depends_on:
       open-construction-erp-backend:

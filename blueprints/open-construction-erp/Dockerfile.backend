@@ -1,0 +1,28 @@
+FROM alpine/git AS source
+RUN git clone --depth 1 --branch v0.2.0 \
+    https://github.com/datadrivenconstruction/OpenConstructionERP.git /src
+
+FROM python:3.12-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN groupadd -r oe && useradd -r -g oe -d /app -s /sbin/nologin oe
+
+WORKDIR /app
+
+# FIX: copy README.md alongside pyproject.toml (upstream bug — hatchling requires it)
+COPY --from=source /src/backend/pyproject.toml /src/backend/README.md backend/
+RUN pip install --no-cache-dir ./backend
+
+COPY --from=source /src/backend/ backend/
+COPY --from=source /src/data/ data/
+
+RUN chown -R oe:oe /app
+
+USER oe
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000"]
