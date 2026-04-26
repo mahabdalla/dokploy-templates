@@ -4562,6 +4562,30 @@
     ]
   },
   {
+    "id": "open-construction-erp",
+    "name": "OpenConstructionERP",
+    "version": "0.2.0",
+    "description": "The #1 open-source construction estimation and project management platform. Features BOQ management, 4D/5D scheduling, AI-powered estimation, CAD/BIM takeoff, 55,000+ cost items, and support for 21 languages and 20 regional standards.",
+    "logo": "logo.png",
+    "links": {
+      "github": "https://github.com/datadrivenconstruction/OpenConstructionERP",
+      "website": "https://openconstructionerp.com",
+      "docs": "https://openconstructionerp.com/docs"
+    },
+    "tags": [
+      "erp",
+      "construction",
+      "estimation",
+      "boq",
+      "project-management",
+      "bim",
+      "ai",
+      "fastapi",
+      "postgresql",
+      "self-hosted"
+    ]
+  },
+  {
     "id": "open-fiesta",
     "name": "Open Fiesta",
     "version": "latest",
@@ -5953,24 +5977,6 @@
     ]
   },
   {
-    "id": "strapi",
-    "name": "Strapi",
-    "version": "v5.33.0",
-    "description": "Open-source headless CMS to build powerful APIs with built-in content management.",
-    "logo": "strapi.svg",
-    "links": {
-      "github": "https://github.com/strapi/strapi",
-      "discord": "https://discord.com/invite/strapi",
-      "docs": "https://docs.strapi.io",
-      "website": "https://strapi.io"
-    },
-    "tags": [
-      "headless",
-      "cms",
-      "content-management"
-    ]
-  },
-  {
     "id": "supabase",
     "name": "SupaBase",
     "version": "1.25.04 / dokploy >= 0.22.5",
@@ -6739,6 +6745,22 @@
       "infrastructure",
       "observability",
       "alerting"
+    ]
+  },
+  {
+    "id": "zeroclaw",
+    "name": "ZeroClaw",
+    "version": "0.7.3",
+    "description": "Fast, small, and fully autonomous AI personal assistant infrastructure. Deploy anywhere, swap anything. 100% Rust.",
+    "logo": "zeroclaw.png",
+    "links": {
+      "github": "https://github.com/zeroclaw-labs/zeroclaw",
+      "website": "https://zeroclaw.com/",
+      "docs": "https://github.com/zeroclaw-labs/zeroclaw#readme"
+    },
+    "tags": [
+      "ai",
+      "self-hosted"
     ]
   },
   {
