@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+postgres_password = "${password:32}"
+jwt_secret = "${password:64}"
+
+[config]
+env = [
+  "POSTGRES_USER=oe",
+  "POSTGRES_PASSWORD=${postgres_password}",
+  "POSTGRES_DB=openestimate",
+  "JWT_SECRET=${jwt_secret}",
+  "ALLOWED_ORIGINS=https://${main_domain}",
+]
+
+[[config.domains]]
+serviceName = "open-construction-erp"
+port = 80
+host = "${main_domain}"
