@@ -21,7 +21,7 @@ services:
   open-construction-erp-backend:
     build:
       context: .
-      dockerfile: blueprints/open-construction-erp/Dockerfile.backend
+      dockerfile: Dockerfile.backend
     restart: unless-stopped
     depends_on:
       postgres:
@@ -49,7 +49,7 @@ services:
   open-construction-erp:
     build:
       context: .
-      dockerfile: blueprints/open-construction-erp/Dockerfile.frontend
+      dockerfile: Dockerfile.frontend
     restart: unless-stopped
     depends_on:
       open-construction-erp-backend:
